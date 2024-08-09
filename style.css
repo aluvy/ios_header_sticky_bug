@@ -1,0 +1,35 @@
+*, body, html { padding: 0; margin: 0; box-sizing:border-box; text-size-adjust : none; }
+button { border: 0 none; background-color: transparent; cursor: pointer; }
+
+/* html, body */
+html, body { width: 100%; height: auto; touch-action: manipulation; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+body { overflow-y: auto; }
+body.scroll-block { overflow: hidden; }
+
+/* header */
+header .news { height: 80px; display: flex; align-items: center; padding: 0 10px; background: #333D51; color: #fff; }
+
+/* logo */
+header .logo { width: 100%; height: 42px; display: flex; align-items: center; background-color: #eee; -webkit-transform: translateZ(0); transform: translateZ(0); transition: all .3s; will-change:scroll-position, contents, top, position; z-index: 1; }
+header .logo h1 { padding-left: 10px; font-size: 20px; margin-right: auto; }
+header .logo #rnb { width: 42px; height: 42px; border-radius: 0; background: #ddd; }
+
+/* gnb */
+header .gnb { width: 100%; height: 34px; background: #fff; border-bottom: 1px solid #ccc; padding: 0 10px; transform: translateZ(0); -webkit-transform: translateZ(0); transition: all .3s; will-change:scroll-position, contents, top, position; z-index: 1; }
+header .gnb ul { display: flex; height: 100%; align-items: center; list-style: none; }
+header .gnb ul li + li { padding-left: 16px;}
+header .logo.sticky:not(.dummy) { position: fixed; left: 0; top: 0; }
+header .gnb.sticky:not(.dummy) { position: fixed; left: 0; top: 42px; }
+header .dummy { display: none; z-index: 0; }
+header .sticky + .dummy { display: block; }
+
+/* rnb */
+nav { position: fixed; left: 100%; top: 0; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255, 0.5); background: rgba(0,0,0, 0.8); transform: translate3d(0, 0, 0); transition: transform .3s; z-index: 99; }
+nav.open { transform: translate3d(-100%, 0, 0); }
+
+/* button_area */
+.button_area { position: fixed; left: 0; bottom: 0; width: 100%; padding: 10px; }
+.button_area button { height: 36px; border-radius: 3px; padding: 5px 15px; border: 1px solid rgba(255,255,255, 0.4); color: #fff; background: rgba(0,0,0, 0.2); }
+
+/* section */
+section { display: block; height: 80vh; padding: 20px; }
